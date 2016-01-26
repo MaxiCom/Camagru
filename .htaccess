@@ -1,0 +1,15 @@
+RedirectMatch 404 /config/.*$
+
+RedirectMatch 404 /includes/$
+RedirectMatch 404 /includes/banner_404.html
+RedirectMatch 404 /includes/head.html
+RedirectMatch 404 /includes/header.html
+RedirectMatch 404 /includes/footer.html
+RedirectMatch 404 /includes/home.php
+RedirectMatch 404 /includes/login.php
+RedirectMatch 404 /includes/script/db_connect.php
+
+ErrorDocument 404 /index.php?error=404
+
+
+Options -Indexes
