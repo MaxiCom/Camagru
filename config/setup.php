@@ -32,7 +32,8 @@
 	$db->query("CREATE TABLE IF NOT EXISTS comments
 	(
 	content text,
-	user_id int,
+	user_name text,
+	pic_id int,
 	time_stamp text
 	)");
 

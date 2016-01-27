@@ -18,5 +18,6 @@
 		echo "Database not found or corrupted, launch the config script before !";
 		die();
 	}
-	
+
+	date_default_timezone_set('Europe/Paris');	
 ?>

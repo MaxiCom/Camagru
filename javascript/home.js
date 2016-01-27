@@ -50,20 +50,6 @@ function Disconnect(elem)
 	return false;
 }
 
-function clear_context()
-{
-  var canvas_png = document.getElementById("canvas");
-  var canvas_file = document.getElementById("canvasfile");
-
-  var canvasctx = canvas_png.getContext('2d');
-  var canvasfilectx = canvas_file.getContext('2d');
-
-  canvasctx.clearRect(0, 0, canvas_png.width, canvas_png.height);
-  
-  if (document.getElementById("lifile").style.display != "block")
-    canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
-}
-
 function refresh_timeline(time)
 {
   var timeline = document.getElementById("timeline");
@@ -218,6 +204,7 @@ function send_file()
     lifile.style.display = "none";
     canvas_with_png.style.display = "none";
     canvasfile.style.display = "none";
+    canvas_file.getContext('2d').clearRect(0, 0, canvas_file.width, canvas_file.height);
     refresh_timeline(1000);
   }
   else
@@ -281,7 +268,6 @@ function active_webcam()
     document.getElementById("livid").style.display = "block";
     document.getElementById("li_gif").style.display = "inline-block";
     document.getElementById("canvas").style.display = "block";
-    document.getElementById("clear").style.display = "table-cell";
   }
   else
   {
@@ -289,4 +275,37 @@ function active_webcam()
     document.getElementById("li_gif").style.display = "none";
     document.getElementById("canvas").style.display = "none";
   }
+}
+
+function post_comment(form)
+{
+  var request = "id_picture=" + form.id_picture.value
+                + "&input_comment=" + form.input_comment.value;
+
+  ajax(request, "/includes/script/upload_comment.php", "Done !");
+  input_comment.value = "";
+  refresh_timeline(1000);
+  return (false);
+}
+
+function like_post(button)
+{
+  var request = "id_picture=" + button.name;
+
+  ajax(request, "/includes/script/like_post.php", "Done !");
+  refresh_timeline(1000);
+}
+
+function clear_context()
+{
+  var canvas_png = document.getElementById("canvas");
+  var canvas_file = document.getElementById("canvasfile");
+
+  var canvasctx = canvas_png.getContext('2d');
+  var canvasfilectx = canvas_file.getContext('2d');
+
+  canvasctx.clearRect(0, 0, canvas_png.width, canvas_png.height);
+  
+  if (document.getElementById("lifile").style.display != "block")
+    canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
 }

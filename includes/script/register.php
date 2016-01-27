@@ -82,7 +82,7 @@
 							padding-top: 20px;
 
 						'>
-			Please click this link to activate your account</br><a href=\"$link\">http://localhost.com/activate</a>
+			Please click this link to activate your account</br><a href=\"$link\">http://camagru.com/activate</a>
 			</div>
 			", $headers);
 

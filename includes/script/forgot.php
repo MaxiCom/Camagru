@@ -58,7 +58,7 @@
 							padding-top: 20px;
 						'>
 
-				Please click this link to recover your password</br><a href=\"$link\">http://localhost:8080/recover</a>
+				Please click this link to recover your password</br><a href=\"$link\">http://camagru.com/recover</a>
 
 			</div>
 		", $headers);

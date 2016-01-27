@@ -13,7 +13,7 @@
 				$emptypassword = 1;
 			else
 			{
-				$stmt = $db->prepare("UPDATE users SET password = :password, val=1 WHERE val = :currentval");
+				$stmt = $db->prepare("UPDATE users SET password = :password, val=1 WHERE val = :currentval AND password <> :password");
 				$stmt->bindValue(':currentval', $_GET['v']);
 				$stmt->bindValue(':password', hash("SHA256", $_POST['newpassword']));
 				$stmt->execute();

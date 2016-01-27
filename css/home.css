@@ -257,3 +257,41 @@ canvas
 {
 	cursor: pointer;
 }
+
+#div_comment
+{
+	padding: 10px;
+}
+
+.comment 
+{
+	margin: 5px;
+
+	text-align: left;
+	border-bottom: 1px solid black;
+}
+
+.comment p
+{
+	-ms-word-break: break-all;
+    word-break: break-all;
+
+
+	padding: 0;
+}
+
+.comment .content
+{
+	padding-left: 15px;
+}
+
+#likes
+{
+	text-align: left;
+	border-bottom: 1px solid black;
+}
+
+#like_button
+{
+	float: right;
+}
