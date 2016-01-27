@@ -59,6 +59,7 @@ function clear_context()
   var canvasfilectx = canvas_file.getContext('2d');
 
   canvasctx.clearRect(0, 0, canvas_png.width, canvas_png.height);
+  
   if (document.getElementById("lifile").style.display != "block")
     canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
 }
