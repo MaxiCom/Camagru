@@ -228,27 +228,6 @@ function send_file()
 
 function active_webcam()
 {
-  if (document.getElementById("lifile").style.display == "block")
-  {
-    document.getElementById("lifile").style.display = "none";
-    document.getElementById("canvasfile").style.display = "none";
-    document.getElementById("input_file").value = "";
-    clear_context();
-  }
-  if (document.getElementById("livid").style.display != "block")
-  {
-    document.getElementById("livid").style.display = "block";
-    document.getElementById("li_gif").style.display = "inline-block";
-    document.getElementById("canvas").style.display = "block";
-    document.getElementById("clear").style.display = "table-cell";
-  }
-  else
-  {
-    document.getElementById("livid").style.display = "none";
-    document.getElementById("li_gif").style.display = "none";
-    document.getElementById("canvas").style.display = "none";
-  }
-
   var streaming = false,
       video        = document.querySelector('#video'),
       cover        = document.querySelector('#cover'),
@@ -289,4 +268,24 @@ function active_webcam()
     }
   }, false);
 
+  if (document.getElementById("lifile").style.display == "block")
+  {
+    document.getElementById("lifile").style.display = "none";
+    document.getElementById("canvasfile").style.display = "none";
+    document.getElementById("input_file").value = "";
+    clear_context();
+  }
+  if (document.getElementById("livid").style.display != "block")
+  {
+    document.getElementById("livid").style.display = "block";
+    document.getElementById("li_gif").style.display = "inline-block";
+    document.getElementById("canvas").style.display = "block";
+    document.getElementById("clear").style.display = "table-cell";
+  }
+  else
+  {
+    document.getElementById("livid").style.display = "none";
+    document.getElementById("li_gif").style.display = "none";
+    document.getElementById("canvas").style.display = "none";
+  }
 }
