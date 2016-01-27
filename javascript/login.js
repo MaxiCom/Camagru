@@ -109,10 +109,9 @@ function form_login(form)
 function form_register(form)
 {
 	var request = "username=" + form.username.value
-				+ "&password=" + form.password.value;
+				+ "&password=" + form.password.value
 				+ "&email=" + form.email.value;
 	
-	alert(request);
 	ajax(request, "/includes/script/register.php", form);
 	return (false);
 }
