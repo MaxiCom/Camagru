@@ -1,7 +1,6 @@
 body
 {
 	min-width: 570px;
-	min-height: 450px;
 }
 
 #left h1
@@ -163,3 +162,4 @@ footer p
 	margin: 0;
 	padding: 0;
 }
+
