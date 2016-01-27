@@ -1,7 +1,6 @@
 body
 {
-	min-width: 700px;
-	min-height: 400px;
+	min-width: 600px;
 }
 
 /* header + container base */
@@ -193,11 +192,6 @@ canvas
 	position: absolute;
 	display: none;
 	margin-top: 1px;
-
-
-	/* debug
-	background-color: blue;
-	opacity: 0.5;*/
 }
 
 #canvasfile

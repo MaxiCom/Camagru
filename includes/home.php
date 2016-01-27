@@ -18,7 +18,7 @@
 							<td id="beer" onclick="display_png(this)"></td>
 							<td id="monkey" onclick="display_png(this)"></td>
 							<td id="banana" onclick="display_png(this)"></td>
-							<td id="clear" onclick="clear_context()">Clear</td>
+							<td onclick="clear_context()">Clear</td>
 						</tr>
 					</table>
 				</li>
@@ -28,7 +28,6 @@
 				<li id="lifile"></li>
 				<li onclick="send_file()">Send</li>
 			</ul>
-
 			<div id="timeline">
 
 			</div>

@@ -16,7 +16,6 @@ function banner_create(text, color)
 
   container.parentNode.insertBefore(divbanner, container);
   setTimeout(function(){ document.getElementById("banner").parentNode.removeChild(document.getElementById("banner")); }, 3000);
-
 }
 
 function ajax(request, link, Success_string)
@@ -51,7 +50,6 @@ function Disconnect(elem)
 	return false;
 }
 
-//clear les deux canvas
 function clear_context()
 {
   var canvas_png = document.getElementById("canvas");
@@ -61,7 +59,8 @@ function clear_context()
   var canvasfilectx = canvas_file.getContext('2d');
 
   canvasctx.clearRect(0, 0, canvas_png.width, canvas_png.height);
-  canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
+  if (document.getElementById("lifile").style.display != "block")
+    canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
 }
 
 function refresh_timeline(time)
@@ -102,7 +101,6 @@ function handle_input_file()
   {
     document.getElementById("lifile").style.display = "block";
     document.getElementById("li_gif").style.display = "inline-block";
-    document.getElementById("clear").style.display = "none";
     document.getElementById("canvasfile").style.display = "block";
     document.getElementById("canvas").style.display = "block";
     document.getElementById('input_file').click();
