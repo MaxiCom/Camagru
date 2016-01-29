@@ -9,8 +9,6 @@
 	}
 
 	$email = htmlspecialchars($_POST['email']);
-	$val = hash("md5", time());
-	$link = "http://localhost:8080/recover.php?v=".$val;
 
 	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE email = :email");
 	$stmt->bindValue(':email', $email);
@@ -29,6 +27,10 @@
 		echo "Error: this account is not active or is already recovering password";
 		die();
 	}
+
+	$val = hash("md5", time());
+	$link = "http://localhost:8080/recover.php?v=".$val;
+
 	//le mail existe
 	$stmt = $db->prepare("UPDATE users SET val = :val WHERE email = :email");
 	$stmt->bindValue(':val', $val);

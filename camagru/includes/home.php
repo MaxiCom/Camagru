@@ -33,7 +33,7 @@
 
 			</div>
 		</div>
-		<input id="input_file" onchange="handleFiles(this);" type="file" accept="image/jpeg, image/png">
+		<input id="input_file" onchange="handleFiles(this);" class='display_none' type="file" accept="image/jpeg, image/png">
 
 		<script type="text/javascript" src="javascript/home.js"></script>
 	</body>

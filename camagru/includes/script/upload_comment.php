@@ -17,6 +17,7 @@
 	$stmt = $db->prepare("SELECT name FROM photos WHERE rowid = :pic_id");
 	$stmt->bindValue(":pic_id", $_POST['id_picture']);
 	$stmt->execute();
+
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	if ($row['name'] != $_SESSION['logged'])
@@ -59,7 +60,6 @@
 	$stmt->bindValue(":username", $_SESSION['logged']);
 	$stmt->bindValue(":pic_id", $_POST['id_picture']);
 	$stmt->bindValue(":time", "Le ".date("d/m à h:i"));
-
 
 	if ($stmt->execute())
 		echo "Success";

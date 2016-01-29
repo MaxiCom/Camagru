@@ -25,10 +25,6 @@
 
 	//Set var
 	$name = htmlspecialchars($_POST['username']);
-	$email = htmlspecialchars($_POST['email']);
-	$password = hash("SHA256", $_POST['password']);
-	$val = hash('md5', time());
-	$link = "http://localhost:8080/activate.php?v=".$val;
 
 	//Check already used username
 	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE name = :name");
@@ -40,7 +36,9 @@
 		die();
 	} 
 
-		//Check already used mail
+	$email = htmlspecialchars($_POST['email']);
+
+	//Check already used mail
 	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE email = :email");
 	$stmt->bindValue(':email', $email);
 	$stmt->execute();
@@ -49,6 +47,10 @@
 		echo "This mail already exists";
 		die();
 	}  
+
+	$password = hash("SHA256", $_POST['password']);
+	$val = hash('md5', time());
+	$link = "http://localhost:8080/activate.php?v=".$val;
 
 	$stmt = $db->prepare('INSERT INTO users (name, email, password, val) VALUES (:name, :email, :password , :val)');
 	$array = array(

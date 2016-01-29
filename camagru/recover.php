@@ -7,13 +7,14 @@
 		header("Location: index.php");
 		die();
 	}
+
 	if (isset($_POST['newpassword']))
 	{
 		if (empty($_POST['newpassword']) || (!empty($_POST['newpassword']) && (strlen($_POST['newpassword']) < 5 || strlen($_POST['newpassword']) > 255)))
 				$emptypassword = 1;
 			else
 			{
-				$stmt = $db->prepare("UPDATE users SET password = :password, val=1 WHERE val = :currentval AND password <> :password");
+				$stmt = $db->prepare("UPDATE users SET password = :password, val=1 WHERE val = :currentval");
 				$stmt->bindValue(':currentval', $_GET['v']);
 				$stmt->bindValue(':password', hash("SHA256", $_POST['newpassword']));
 				$stmt->execute();
@@ -26,6 +27,7 @@
 	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE val = :currentval");
 	$stmt->bindValue(':currentval', $_GET['v']);
 	$stmt->execute();
+	
 	if ($stmt->fetchColumn() == 0)
 	{
 		header("Location: index.php?error=invalid_link");
