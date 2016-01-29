@@ -1,6 +1,7 @@
 <?php
 
-	require_once("db_connect.php");		
+	require_once("db_connect.php");	
+		
 	session_start();
 
 	$_POST['base64'] = file_get_contents("php://input");

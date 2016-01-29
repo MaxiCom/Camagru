@@ -7,6 +7,7 @@
 	</head>
 	<body>
 		<?php include("includes/header.php"); ?>
+		<?php include("includes/banner.php"); ?>
 		<div id="container">
 			<ul>
 				<li><h3>To upload a picture you can<h3></li>

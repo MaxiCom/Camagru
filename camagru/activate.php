@@ -4,9 +4,10 @@
 
 	if (!isset($_GET['v']) || (isset($_GET['v']) && empty($_GET['v'])))
 	{
-		header("Location: index.php");
+		header("Location: index.php?error=404");
 		die();
 	}
+	
 	$stmt = $db->prepare("UPDATE users SET val = 1 WHERE val = :currentval");
 	$stmt->bindValue(':currentval', $_GET['v']);
 	$stmt->execute();

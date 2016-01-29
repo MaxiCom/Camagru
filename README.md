@@ -4,8 +4,7 @@ Camagru est un projet web du cursus de l'école 42.
 
 Il consiste à faire un site web de montage photo simple avec l'api javascript native Webrtc.
 
-serveur web:  apache (pour l'htaccess).
+serveur web conseillé:  apache (pour l'htaccess).
+base de données: sqlite.
 
-bdd: sqlite.
-
-"Php config/setup.php" Pour creer la base de données.
+"Php config/setup.php" Pour créer la base de données.

@@ -36,7 +36,6 @@
 				<label for="email3">Mail: </label><input size=17 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required type="text" id="email3" name="forgotemail"></br>
 				<input type="submit" value="Send mail">
 			</form>
-
 		</div>
 
 		<?php include("includes/footer.html"); ?>

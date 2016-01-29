@@ -1,5 +1,10 @@
 (function(){
   refresh_timeline(0);
+
+  setTimeout(function(){ 
+  if (document.getElementById("banner"))
+    document.getElementById("banner").parentNode.removeChild(document.getElementById("banner"));
+  }, 5000);
 })();
 
 function banner_create(text, color)
