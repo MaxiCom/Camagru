@@ -1,4 +1,5 @@
 <?php
+
 	define("DB_PATH", "/tmp/Database.db");
 	
 	$DB_DSN = "sqlite:".DB_PATH;

@@ -10,9 +10,9 @@
 		<div id="container">
 			<ul>
 				<li><h3>To upload a picture you can<h3></li>
-				<li class="middle" onclick="active_webcam();">Use your webcam</li>
-				<li class="middle" onclick="handle_input_file()">Choose an image file</li>
-				<li id="li_gif">
+				<li class="middle pointer" onclick="active_webcam();">Use your webcam</li>
+				<li class="middle pointer" onclick="handle_input_file()">Choose an image file</li>
+				<li id="li_gif" class="display_none">
 					<table>
 						<tr>
 							<td id="beer" onclick="display_png(this)"></td>
@@ -22,11 +22,11 @@
 						</tr>
 					</table>
 				</li>
-				<canvas id="canvasfile"></canvas>
-				<canvas id="canvas"></canvas>
-				<li id="livid"><video id="video"></video></li>
-				<li id="lifile"></li>
-				<li onclick="send_file()">Send</li>
+				<canvas id="canvasfile" class="display_none"></canvas>
+				<canvas id="canvas" class="display_none"></canvas>
+				<li id="livid" class="display_none"><video id="video"></video></li>
+				<li id="lifile" class="display_none"></li>
+				<li onclick="send_file()" class="pointer">Send</li>
 			</ul>
 			<div id="timeline">
 

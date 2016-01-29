@@ -1,6 +1,7 @@
 <?php
 	
-	include("database.php");
+	require("database.php");
+	
 	if (file_exists(DB_PATH))
 		unlink(DB_PATH);
 
@@ -14,27 +15,27 @@
 	}
 
 	$db->query("CREATE TABLE IF NOT EXISTS users
-	(
-	name varchar(255),
-	email varchar(255),
-	password varchar(255),
-	val varchar(255)
-	)");
+				(
+					name varchar(255),
+					email varchar(255),
+					password varchar(255),
+					val varchar(255)
+				)");
 
 	$db->query("CREATE TABLE IF NOT EXISTS photos
-	(
-	image text,
-	likes int,
-	name varchar(255),
-	time_stamp text
-	)");
+				(
+					image text,
+					likes int,
+					name varchar(255),
+					time_stamp text
+				)");
 	
 	$db->query("CREATE TABLE IF NOT EXISTS comments
-	(
-	content text,
-	user_name text,
-	pic_id int,
-	time_stamp text
-	)");
+				(
+					content text,
+					user_name text,
+					pic_id int,
+					time_stamp text
+				)");
 
 ?>

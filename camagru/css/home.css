@@ -3,49 +3,23 @@ body
 	min-width: 600px;
 }
 
-/* header + container base */
-header #right table
-{
-	height: 20px;
-}
-
-header #right table td:nth-child(1)
-{
-	display: inline-block;
-
-	height: 40px;
-	line-height: 40px;
-	padding-right: 10px;
-	border-right: 1px solid black;
-}
-
-header span:hover
-{
-	background-color: #19D2CB;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
 #container
 {
 	width: 500px;
 
-	padding-bottom: 20px;
+	padding: 20px 0px;
 	margin: auto;
-	text-align: center;
-}
 
-#input_file
-{
-	display: none;
+	text-align: center;
 }
 
 /* Liste */
 ul
 {	
-	min-height: 199px;
-
  	display: inline-block;
+	
+	min-height: 199px;
+ 	
  	padding: 0;
 
  	list-style: none;
@@ -71,15 +45,17 @@ ul li:nth-child(1)
 
 ul .middle
 {
-	width: 229.5px;
 	display: inline-block;
+	float: left;
+	
+	width: 229.5px;
+	
 	height: 100px;
 	line-height: 100px;
 
 	border-bottom: 1px solid black;
 	background-color: #0FBBB5;
-	float: left;
-	cursor: pointer;
+
 	transition: all 0.5s;
 }
 
@@ -98,9 +74,10 @@ ul li:nth-last-child(1)
 	border-top: 1px solid black;
 
 	background-color: #DADADA;
-	cursor: pointer;
+
 	transition: all 0.5s;
 }
+
 ul li:nth-last-child(1):hover
 {
 	background-color: #BFBFBF;
@@ -108,26 +85,29 @@ ul li:nth-last-child(1):hover
 
 ul #li_gif
 {
-
-	display: none;
 	width: 100%;
-	padding: 0;
+
 	height: 50px;
 	line-height: 25px;
+	
+	padding: 0;
 }
 
 ul #li_gif table
 {
 	width: 100%;
+
 	border-spacing: 0px;
 }
 
 ul #li_gif tr td
 {
-	height: 53px;
 	width: 30%;
-	cursor: pointer;
+	height: 55px;
+	
 	border-bottom: 1px solid black;
+
+	cursor: pointer;
 }
 
 ul #li_gif tr td:nth-child(1)
@@ -152,6 +132,7 @@ ul #li_gif tr td:nth-child(2)
 	background: url("../images/singe.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
+
 	transition: background-color 1s;
 }
 
@@ -168,6 +149,7 @@ ul #li_gif tr td:nth-child(3)
 	background: url("../images/banane.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
+
 	transition: background-color 1s;
 }
 
@@ -183,6 +165,7 @@ ul #li_gif tr td:not(:last-child)
 {
 	border-right: 1px solid black;
 }
+
 /* canvas */
 canvas
 {
@@ -190,7 +173,6 @@ canvas
 	height: 375px;
 
 	position: absolute;
-	display: none;
 	margin-top: 1px;
 }
 
@@ -200,39 +182,35 @@ canvas
 	height: 375px;
 
 	position: absolute;
-	display: none;
 	margin-top: 1px;
 }
 
-
 #livid
 {
-	display: none;
-
-	padding: 0;
-	margin-top: 1px;
-
 	height: 375px;
+	
+	padding: 0;
+
+	margin-top: 1px;
 }
 
 #lifile
 {
-	display: none;
+	height: 375px;
 
 	padding: 0;
+
 	margin-top: 1px;
-
-	height: 375px;
 }
 
-.float-right
+.post
 {
-	float: right;
-}
+	margin-top: 20px; 
 
-.float-left
-{
-	float: left;
+	border: 1px solid grey;
+	border-radius: 3px;
+
+	background-color: #19D2CB;
 }
 
 .post p
@@ -240,22 +218,9 @@ canvas
 	padding: 10px; 
 }
 
-.post
-{
-	background-color: #19D2CB;
-	border: 1px solid grey;
-	border-radius: 3px;
-	margin-top: 20px; 
-}
-
 .post img
 {
 	width: 480px;
-}
-
-.delete_span
-{
-	cursor: pointer;
 }
 
 #div_comment
@@ -276,7 +241,6 @@ canvas
 	-ms-word-break: break-all;
     word-break: break-all;
 
-
 	padding: 0;
 }
 
@@ -289,9 +253,4 @@ canvas
 {
 	text-align: left;
 	border-bottom: 1px solid black;
-}
-
-#like_button
-{
-	float: right;
 }

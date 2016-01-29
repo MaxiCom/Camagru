@@ -18,7 +18,7 @@
 					
 					//display X if logged
 					if ($row['name'] == $_SESSION['logged']){?>
-						<span data-name='<?php echo $row['rowid']; ?>' class='delete_span' onclick="delete_post(this)"><b>X</b></span>
+						<span data-name='<?php echo $row['rowid']; ?>' class='pointer' onclick="delete_post(this)"><b>X</b></span>
 					<?php } ?>
 				</p>
 			</div>
@@ -27,7 +27,7 @@
 				<?php echo $row['likes'];?> Likes
 				<!-- si n'a pas like afficher le bouton -->
 				<?php if (!isset($_SESSION["pic_id_".$row['rowid']])) { ?>
-					<button onclick="like_post(this)" name='<?php echo $row['rowid']; ?>' id="like_button">Like</button>
+					<button onclick="like_post(this)" class='float-right' name='<?php echo $row['rowid']; ?>' id="like_button">Like</button>
 				<?php } ?>
 			</p>
 				<?php

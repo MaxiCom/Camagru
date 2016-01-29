@@ -25,14 +25,14 @@
 				<input type="submit" value="Log in" />
 			</form>
 
-			<form autocomplete="off" onsubmit="return form_register(this)" id="form_register">
+			<form autocomplete="off" onsubmit="return form_register(this)" id="form_register" class="display_none">
 				<label for="username2">Username: </label><input size=17 pattern=".{5,15}" required title="5 letters min. - 15 max." type="text" id="username2" name="username"></br>
 				<label for="password2">Password: </label><input size=17 pattern=".{5,255}" required title="5 letters min. - 255 max." type="password" id="password2" name="password"></br>
 				<label for="email2">Email: </label><input size=17 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required type="text" id="email2" name="email"></br>
 				<input type="submit" value="Register" />
 			</form>
 
-			<form autocomplete="off" onsubmit="return form_forgot(this)" id="form_forgot">
+			<form autocomplete="off" onsubmit="return form_forgot(this)" id="form_forgot" class="display_none">
 				<label for="email3">Mail: </label><input size=17 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required type="text" id="email3" name="forgotemail"></br>
 				<input type="submit" value="Send mail">
 			</form>
