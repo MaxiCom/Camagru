@@ -10,7 +10,7 @@
 		<?php include("includes/banner.php"); ?>
 		<div id="container">
 			<ul>
-				<li><h3>To upload a picture you can<h3></li>
+				<li><h3>To upload a picture you can</h3></li>
 				<li class="middle pointer" onclick="active_webcam();">Use your webcam</li>
 				<li class="middle pointer" onclick="handle_input_file()">Choose an image file</li>
 				<li id="li_gif" class="display_none">
@@ -23,8 +23,8 @@
 						</tr>
 					</table>
 				</li>
-				<canvas id="canvasfile" class="display_none"></canvas>
-				<canvas id="canvas" class="display_none"></canvas>
+				<li id="canvasfile_li"><canvas id="canvasfile" class="display_none"></canvas></li>
+				<li id="canvas_li"><canvas id="canvas" class="display_none"></canvas></li>
 				<li id="livid" class="display_none"><video id="video"></video></li>
 				<li id="lifile" class="display_none"></li>
 				<li onclick="send_file()" class="pointer">Send</li>

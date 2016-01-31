@@ -166,6 +166,20 @@ ul #li_gif tr td:not(:last-child)
 	border-right: 1px solid black;
 }
 
+#canvas_li
+{
+	height: 0;
+	width: 0;
+	padding: 0;
+}
+
+#canvasfile_li
+{
+	height: 0;
+	width: 0;
+	padding: 0;
+}
+
 /* canvas */
 canvas
 {
@@ -174,6 +188,9 @@ canvas
 
 	position: absolute;
 	margin-top: 1px;
+
+	opacity: 0.5;
+	background-color: blue;
 }
 
 #canvasfile
@@ -181,8 +198,11 @@ canvas
 	width: 500px;
 	height: 375px;
 
-	position: absolute;
-	margin-top: 1px;
+	
+
+	opacity: 0.5;
+	background-color: blue;
+
 }
 
 #livid
