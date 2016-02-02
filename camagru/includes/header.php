@@ -1,7 +1,7 @@
 <header>
 	<div id="header_container">
 		
-		<div class="float-left">
+		<div id="left" class="float-left">
 			<h1 class="pointer" <?php if (isset($_SESSION['logged'])) echo "onclick='refresh_timeline();'";?> >Camagru</h1>
 		</div>
 

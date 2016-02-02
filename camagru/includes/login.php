@@ -14,7 +14,7 @@
 					<tr>
 						<td id="table_login" onclick="switch_form(this)">Log in</td>
 						<td id="table_register" onclick="switch_form(this)">Register</td>
-						<td id="table_forgot" onclick="switch_form(this)">Forgot your password ?</td>
+						<td id="table_forgot" onclick="switch_form(this)">Forgot ?</td>
 					</tr>
 				</tbody>
 			</table>
