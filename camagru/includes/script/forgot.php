@@ -29,7 +29,7 @@
 	}
 
 	$active_val = hash("md5", time());
-	$link = "http://localhost:8080/recover.php?v=".$val;
+	$link = "http://localhost:8080/recover.php?v=".$active_val;
 
 	//le mail existe
 	$stmt = $db->prepare("UPDATE users SET active = :active_val WHERE email = :email");

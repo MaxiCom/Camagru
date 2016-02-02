@@ -14,8 +14,8 @@
 				$emptypassword = 1;
 			else
 			{
-				$stmt = $db->prepare("UPDATE users SET password = :password, val=1 WHERE val = :currentval");
-				$stmt->bindValue(':currentval', $_GET['v']);
+				$stmt = $db->prepare("UPDATE users SET password = :password, active=1 WHERE active = :active_value");
+				$stmt->bindValue(':active_value', $_GET['v']);
 				$stmt->bindValue(':password', hash("SHA256", $_POST['newpassword']));
 				$stmt->execute();
 
@@ -24,8 +24,8 @@
 			}
 	}
 
-	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE val = :currentval");
-	$stmt->bindValue(':currentval', $_GET['v']);
+	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE active = :active_value");
+	$stmt->bindValue(':active_value', $_GET['v']);
 	$stmt->execute();
 	
 	if ($stmt->fetchColumn() == 0)

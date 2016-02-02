@@ -8,8 +8,8 @@
 		die();
 	}
 	
-	$stmt = $db->prepare("UPDATE users SET val = 1 WHERE val = :currentval");
-	$stmt->bindValue(':currentval', $_GET['v']);
+	$stmt = $db->prepare("UPDATE users SET active = 1 WHERE active = :active_value");
+	$stmt->bindValue(':active_value', $_GET['v']);
 	$stmt->execute();
 	if ($stmt->rowCount() == 0)
 		header("location: index.php?error=activation");
