@@ -135,7 +135,7 @@ header #logout_button:hover
 	text-align: center;
 	font-weight: bold;
 
-	box-shadow: 0px 2px 10px 0.05px grey;
+	box-shadow: 0px 1px 10px 0.05px grey;
 }
 
 .redbanner

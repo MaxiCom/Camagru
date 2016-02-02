@@ -19,7 +19,7 @@
 		die();
 	}
 
-	$stmt = $db->prepare("SELECT val FROM users WHERE email = :email");
+	$stmt = $db->prepare("SELECT active FROM users WHERE email = :email");
 	$stmt->bindValue(':email', $email);
 	$stmt->execute();
 	if ($stmt->fetchColumn() != "1")
@@ -28,12 +28,12 @@
 		die();
 	}
 
-	$val = hash("md5", time());
+	$active_val = hash("md5", time());
 	$link = "http://localhost:8080/recover.php?v=".$val;
 
 	//le mail existe
-	$stmt = $db->prepare("UPDATE users SET val = :val WHERE email = :email");
-	$stmt->bindValue(':val', $val);
+	$stmt = $db->prepare("UPDATE users SET active = :active_val WHERE email = :email");
+	$stmt->bindValue(':active_val', $active_val);
 	$stmt->bindValue(':email', $email);
 	$stmt->execute();	
 	

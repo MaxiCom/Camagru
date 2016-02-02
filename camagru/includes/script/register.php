@@ -24,11 +24,11 @@
 	}
 
 	//Set var
-	$name = htmlspecialchars($_POST['username']);
+	$username = htmlspecialchars($_POST['username']);
 
 	//Check already used username
-	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE name = :name");
-	$stmt->bindValue(':name', $name);
+	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE username = :username");
+	$stmt->bindValue(':username', $username);
 	$stmt->execute();
 	if ($stmt->fetchColumn() > 0)
 	{
@@ -49,15 +49,15 @@
 	}  
 
 	$password = hash("SHA256", $_POST['password']);
-	$val = hash('md5', time());
-	$link = "http://localhost:8080/activate.php?v=".$val;
+	$active_value = hash('md5', time());
+	$link = "http://localhost:8080/activate.php?v=".$active_value;
 
-	$stmt = $db->prepare('INSERT INTO users (name, email, password, val) VALUES (:name, :email, :password , :val)');
+	$stmt = $db->prepare('INSERT INTO users (username, password, email, active) VALUES (:username, :password, :email, :active_value)');
 	$array = array(
-	         ':name'   => $name,
-	         ':email'    => $email,
+	         ':username'   => $username,
 	         ':password'    => $password,
-	         ':val'   => $val);
+	         ':email'    => $email,
+	         ':active_value'   => $active_value);
 
 	if ($stmt->execute($array))
 		echo "Success";

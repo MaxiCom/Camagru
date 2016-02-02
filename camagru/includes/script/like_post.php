@@ -10,10 +10,10 @@
 		die ();
 	}
 
-	$stmt = $db->prepare("UPDATE photos SET likes=likes+1 WHERE rowid = :id_picture");
+	$stmt = $db->prepare("UPDATE pictures SET likes=likes+1 WHERE rowid = :id_picture");
 	$stmt->bindValue(":id_picture", $_POST['id_picture']);
 	$stmt->execute();
 
-	$_SESSION["pic_id_".$_POST['id_picture']] = "1";
+	$_SESSION["liked_on_picture_id_".$_POST['id_picture']] = "1";
 	echo "Success";
 ?>

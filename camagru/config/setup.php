@@ -16,26 +16,26 @@
 
 	$db->query("CREATE TABLE IF NOT EXISTS users
 				(
-					name varchar(255),
-					email varchar(255),
+					username varchar(255),
 					password varchar(255),
-					val varchar(255)
+					email varchar(255),
+					active varchar(255)
 				)");
 
-	$db->query("CREATE TABLE IF NOT EXISTS photos
+	$db->query("CREATE TABLE IF NOT EXISTS pictures
 				(
+					username varchar(255),
 					image text,
 					likes int,
-					name varchar(255),
-					time_stamp text
+					time text
 				)");
 	
 	$db->query("CREATE TABLE IF NOT EXISTS comments
 				(
+					username text,
 					content text,
-					user_name text,
-					pic_id int,
-					time_stamp text
+					on_picture_id int,
+					time text
 				)");
 
 ?>

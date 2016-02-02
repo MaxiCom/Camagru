@@ -14,16 +14,16 @@
 		die();
 	}
 
-	$stmt = $db->prepare("SELECT name FROM photos WHERE rowid = :pic_id");
-	$stmt->bindValue(":pic_id", $_POST['id_picture']);
+	$stmt = $db->prepare("SELECT username FROM pictures WHERE rowid = :on_picture_id");
+	$stmt->bindValue(":on_picture_id", $_POST['id_picture']);
 	$stmt->execute();
 
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-	if ($row['name'] != $_SESSION['logged'])
+	if ($row['username'] != $_SESSION['logged'])
 	{
-		$stmt = $db->prepare("SELECT email FROM users JOIN photos USING(name) WHERE photos.rowid = :pic_id");
-		$stmt->bindValue(":pic_id", $_POST['id_picture']);
+		$stmt = $db->prepare("SELECT email FROM users JOIN pictures USING(username) WHERE photos.rowid = :on_picture_id");
+		$stmt->bindValue(":on_picture_id", $_POST['id_picture']);
 		$stmt->execute();
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -55,9 +55,9 @@
 
 
 	$comment = htmlspecialchars($_POST['input_comment']);
-	$stmt = $db->prepare("INSERT INTO comments (content, user_name, pic_id, time_stamp) VALUES (:content, :username, :pic_id, :time)");
-	$stmt->bindValue(":content", $comment);
+	$stmt = $db->prepare("INSERT INTO comments (username, content, on_picture_id, time) VALUES (:username, :content, :pic_id, :time)");
 	$stmt->bindValue(":username", $_SESSION['logged']);
+	$stmt->bindValue(":content", $comment);
 	$stmt->bindValue(":pic_id", $_POST['id_picture']);
 	$stmt->bindValue(":time", "Le ".date("d/m à h:i"));
 

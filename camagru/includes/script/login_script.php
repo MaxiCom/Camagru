@@ -24,8 +24,8 @@
 	$username = htmlspecialchars($_POST['username']);
 	$password = hash("SHA256", $_POST['password']);
 
-	$stmt = $db->prepare("SELECT COUNT(*) FROM users where name = :name and password = :password and val=1");
-	$stmt->bindValue(":name", $username);
+	$stmt = $db->prepare("SELECT COUNT(*) FROM users where username = :username and password = :password and active=1");
+	$stmt->bindValue(":username", $username);
 	$stmt->bindValue(":password", $password);
 	$stmt->execute();
 

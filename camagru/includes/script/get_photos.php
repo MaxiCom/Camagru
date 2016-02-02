@@ -3,7 +3,7 @@
 	require_once("db_connect.php");
 	session_start();
 
-	$result = $db->query("SELECT rowid, * FROM photos ORDER BY rowid DESC");
+	$result = $db->query("SELECT rowid, * FROM pictures ORDER BY rowid DESC");
 	
 	foreach ($result as $row)
 	{?>
@@ -11,15 +11,15 @@
 		<div class='post'>
 			<div class='float-left'>
 				<p>
-					<b><?php echo $row['name'];?></b> a posté
+					<b><?php echo $row['username'];?></b> a posté
 				</p>
 			</div>
 
 			<div class='float-right'>
 				<p>
-					<?php echo $row['time_stamp'];
+					<?php echo $row['time'];
 						//display X if logged
-						if ($row['name'] == $_SESSION['logged']){?>
+						if ($row['username'] == $_SESSION['logged']){?>
 							<span data-name='<?php echo $row['rowid']; ?>' class='pointer' onclick="delete_post(this)"><b>X</b></span>
 					<?php } ?>
 				</p>
@@ -30,19 +30,19 @@
 			<p id="likes"><?php echo $row['likes'];?> Likes
 
 				<!-- si n'a pas like afficher le bouton -->
-				<?php if (!isset($_SESSION["pic_id_".$row['rowid']])) { ?>
+				<?php if (!isset($_SESSION["liked_on_picture_id_".$row['rowid']])) { ?>
 					<button onclick="like_post(this)" class='float-right' name='<?php echo $row['rowid']; ?>' id="like_button">Like</button>
 				<?php } ?>
 			</p>
 
 				<?php
 					//display comment
-					$result_comment = $db->query('SELECT * FROM comments WHERE pic_id='.$row['rowid'].'');					
+					$result_comment = $db->query('SELECT * FROM comments WHERE on_picture_id='.$row['rowid'].'');					
 					foreach ($result_comment as $row_comment)
 					{?>
 						
 						<div class='comment'>
-							<p><b><?php echo $row_comment['user_name'] ?></b><span class='float-right'><?php echo $row_comment['time_stamp'] ?></span></p>
+							<p><b><?php echo $row_comment['username'] ?></b><span class='float-right'><?php echo $row_comment['time'] ?></span></p>
 							<p class='content'><?php echo $row_comment['content'] ?></p>
 						</div>
 
