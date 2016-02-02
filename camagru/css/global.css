@@ -71,22 +71,23 @@ header
 } 
 
 /* header left */
-header #left
-{
-	float: left;
-}
-
 header h1
 {
-	padding-right: 5px;
-	padding-left: 5px;
-	padding-bottom: 4px;
+	padding: 0px 5px 4px 5px;
 
-	border-radius: 10px;
-	transition: all 0.5s;
+	transition: 0.4s all;
 }
 
-/* header right */
+header h1:active
+{
+	padding-left: 50px;
+
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+}
+
+/* header right A FAIRE */
 header #right
 {
 	float: right;
@@ -133,6 +134,8 @@ header #logout_button:hover
 
 	text-align: center;
 	font-weight: bold;
+
+	box-shadow: 0px 2px 10px 0.05px grey;
 }
 
 .redbanner
