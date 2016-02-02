@@ -23,3 +23,34 @@ function banner_create(text, color)
 		}, 3000);
 	}
 }
+
+function ajax(request, link, form, home)
+{
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.onreadystatechange = function(){
+
+		if (xmlhttp.readyState == XMLHttpRequest.DONE)
+		{	
+			if (xmlhttp.responseText == "Success")
+			{
+				//si il y a un formulaire a changer
+				if (form != null)
+				{
+					banner_create("Check your inbox", "green");
+					form.reset();
+				}
+				else if (home == 1)
+					banner_create("Done !", "green");
+				else
+					document.location.href = "/";
+			}
+			else
+				banner_create(xmlhttp.responseText, "red");
+		}
+	};
+
+	xmlhttp.open("POST", link, true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send(request);
+}

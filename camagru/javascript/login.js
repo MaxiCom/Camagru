@@ -1,38 +1,9 @@
-function ajax(request, link, form)
-{
-	var xmlhttp = new XMLHttpRequest();
-
-	xmlhttp.onreadystatechange = function(){
-
-		if (xmlhttp.readyState == XMLHttpRequest.DONE)
-		{	
-			if (xmlhttp.responseText == "Success")
-			{
-				//si il y a un formulaire a changer
-				if (form != null)
-				{
-					banner_create("Check your inbox", "green");
-					form.reset();
-				}
-				else
-					document.location.href = "/";
-			}
-			else
-				banner_create(xmlhttp.responseText, "red");
-		}
-	};
-
-	xmlhttp.open("POST", link, true);
-	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send(request);
-}
-
 function form_login(form)
 {
 	var request = "username=" + form.username.value 
 				+ "&password=" + form.password.value;
 	
-	ajax(request, "/includes/script/login_script.php", null);
+	ajax(request, "/includes/script/login_script.php", null, 0);
 	return (false);
 }
 
@@ -42,7 +13,7 @@ function form_register(form)
 				+ "&password=" + form.password.value
 				+ "&email=" + form.email.value;
 	
-	ajax(request, "/includes/script/register.php", form);
+	ajax(request, "/includes/script/register.php", form, 0);
 	return (false);
 }
 
@@ -50,7 +21,7 @@ function form_forgot(form)
 {
 	var request = "email=" + form.forgotemail.value;
 	
-	ajax(request, "/includes/script/forgot.php", form);
+	ajax(request, "/includes/script/forgot.php", form, 0);
 	return (false);
 }
 

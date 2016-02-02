@@ -3,6 +3,15 @@ body
 	min-width: 600px;
 }
 
+header h1:active
+{
+	padding-left: 50px;
+
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+}
+
 #container
 {
 	width: 85%;

@@ -1,6 +1,6 @@
 body
 {
-	min-width: 600px;
+	min-width: 550px;
 }
 
 #container
@@ -168,15 +168,11 @@ ul #li_gif tr td:not(:last-child)
 
 #canvas_li
 {
-	height: 0;
-	width: 0;
 	padding: 0;
 }
 
 #canvasfile_li
 {
-	height: 0;
-	width: 0;
 	padding: 0;
 }
 
@@ -187,17 +183,12 @@ canvas
 	height: 375px;
 
 	position: absolute;
-	margin-top: 1px;
-
-	opacity: 0.5;
-	background-color: blue;
 }
 
 #canvasfile
 {
 	width: 500px;
 	height: 375px;
-
 }
 
 #livid
@@ -205,8 +196,6 @@ canvas
 	height: 375px;
 	
 	padding: 0;
-
-	margin-top: 1px;
 }
 
 #lifile
@@ -214,8 +203,6 @@ canvas
 	height: 375px;
 
 	padding: 0;
-
-	margin-top: 1px;
 }
 
 .post

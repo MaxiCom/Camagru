@@ -23,8 +23,8 @@
 						</tr>
 					</table>
 				</li>
-				<li id="canvasfile_li"><canvas id="canvasfile" class="display_none"></canvas></li>
-				<li id="canvas_li"><canvas id="canvas" class="display_none"></canvas></li>
+				<li width=0 height=0 id="canvasfile_li"><canvas id="canvasfile" class="display_none"></canvas></li>
+				<li width=0 height=0 id="canvas_li"><canvas id="canvas" class="display_none"></canvas></li>
 				<li id="livid" class="display_none"><video id="video"></video></li>
 				<li id="lifile" class="display_none"></li>
 				<li onclick="send_file()" class="pointer">Send</li>
@@ -35,6 +35,7 @@
 		</div>
 		<input id="input_file" onchange="handleFiles(this);" class='display_none' type="file" accept="image/jpeg, image/png">
 
+		<script type="text/javascript" src="/javascript/global.js"></script>
 		<script type="text/javascript" src="javascript/home.js"></script>
 	</body>
 </html>

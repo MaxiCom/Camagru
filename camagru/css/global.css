@@ -78,15 +78,6 @@ header h1
 	transition: 0.4s all;
 }
 
-header h1:active
-{
-	padding-left: 50px;
-
-	-webkit-transform:rotate(360deg);
-	-moz-transform:rotate(360deg);
-	-o-transform:rotate(360deg);
-}
-
 /* header right A FAIRE */
 header #right
 {

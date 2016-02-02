@@ -1,64 +1,51 @@
 (function(){
-  //refresh_timeline(0);
-
+  refresh_timeline(0);
 })();
-
-function ajax(request, link, Success_string)
-{
-  var xmlhttp = new XMLHttpRequest();
-
-  xmlhttp.onreadystatechange = function(){
-
-    if (xmlhttp.readyState == XMLHttpRequest.DONE)
-    { 
-      if (xmlhttp.responseText == "Success")
-      {
-        if (Success_string == null)
-            document.location.href = "/";
-        else
-          banner_create(Success_string, "green");
-      }
-      else
-          banner_create(xmlhttp.responseText, "red");
-    }
-  };
-
-  xmlhttp.open("POST", link, true);
-  xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xmlhttp.send(request);
-}
 
 function Disconnect(elem)
 {
-	ajax(null, "/includes/script/disconnect.php", null);
-
-	return false;
-}
-
-function refresh_timeline(time)
-{
-  var timeline = document.getElementById("timeline");
-
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function(){
-    if (xmlhttp.readyState == XMLHttpRequest.DONE)
-      timeline.innerHTML = xmlhttp.responseText;
-  };
-
-  xmlhttp.open("POST", "includes/script/get_photos.php", true);
-  setTimeout(function()
-  {
-    timeline.innerHTML = "";
-    xmlhttp.send(); 
-  }, time);
+  ajax(null, "/includes/script/disconnect.php", null, 1);
 }
 
 function delete_post(post)
 {
   var request = "id_post=" + post.getAttribute('data-name');
 
-  ajax(request, "/includes/script/delete_picture.php", "Done !");
+  ajax(request, "/includes/script/delete_picture.php", null, 1);
   refresh_timeline(1000);
+}
+
+function post_comment(form)
+{
+  var request = "id_picture=" + form.id_picture.value
+                + "&input_comment=" + form.input_comment.value;
+
+  ajax(request, "/includes/script/upload_comment.php", null, 1);
+  input_comment.value = "";
+  refresh_timeline(1000);
+  return (false);
+}
+
+function like_post(button)
+{
+  var request = "id_picture=" + button.name;
+
+  ajax(request, "/includes/script/like_post.php", null, 1);
+  refresh_timeline(1000);
+}
+
+function clear_context()
+{
+  var canvas_png = document.getElementById("canvas");
+  var canvas_file = document.getElementById("canvasfile");
+
+  var canvasctx = canvas_png.getContext('2d');
+  var canvasfilectx = canvas_file.getContext('2d');
+
+  canvasctx.clearRect(0, 0, canvas_png.width, canvas_png.height);
+  
+  if (document.getElementById("lifile").style.display != "block")
+    canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
 }
 
 function handle_input_file()
@@ -180,7 +167,7 @@ function send_file()
     canvas_final.getContext('2d').drawImage(canvas_with_png, 0, 0,canvas_final.width, canvas_final.height);
  
     img.src = canvas_final.toDataURL("image/jpeg", 1);
-    ajax(img.src, "/includes/script/upload_picture.php", "Done !");
+    ajax(img.src, "/includes/script/upload_picture.php", null, 1);
 
     //clear
     clear_context();
@@ -262,35 +249,20 @@ function active_webcam()
   }
 }
 
-function post_comment(form)
+function refresh_timeline(time)
 {
-  var request = "id_picture=" + form.id_picture.value
-                + "&input_comment=" + form.input_comment.value;
+  var timeline = document.getElementById("timeline");
 
-  ajax(request, "/includes/script/upload_comment.php", "Done !");
-  input_comment.value = "";
-  refresh_timeline(1000);
-  return (false);
-}
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if (xmlhttp.readyState == XMLHttpRequest.DONE)
+      timeline.innerHTML = xmlhttp.responseText;
+  };
 
-function like_post(button)
-{
-  var request = "id_picture=" + button.name;
-
-  ajax(request, "/includes/script/like_post.php", "Done !");
-  refresh_timeline(1000);
-}
-
-function clear_context()
-{
-  var canvas_png = document.getElementById("canvas");
-  var canvas_file = document.getElementById("canvasfile");
-
-  var canvasctx = canvas_png.getContext('2d');
-  var canvasfilectx = canvas_file.getContext('2d');
-
-  canvasctx.clearRect(0, 0, canvas_png.width, canvas_png.height);
-  
-  if (document.getElementById("lifile").style.display != "block")
-    canvasfilectx.clearRect(0, 0, canvas_file.width, canvas_file.height);
+  xmlhttp.open("POST", "includes/script/get_photos.php", true);
+  setTimeout(function()
+  {
+    xmlhttp.send();
+    timeline.innerHTML = ""; 
+  }, time);
 }
