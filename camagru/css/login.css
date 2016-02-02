@@ -3,23 +3,6 @@ body
 	min-width: 570px;
 }
 
-#left h1
-{
-	-webkit-transition-duration: 0.4s;
-	-moz-transition-duration: 0.4s;
-	-o-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-}
-
-#left h1:active
-{
-	padding-left: 50px;
-
-	-webkit-transform:rotate(360deg);
-	-moz-transform:rotate(360deg);
-	-o-transform:rotate(360deg);
-}
-
 #container
 {
 	width: 95%;

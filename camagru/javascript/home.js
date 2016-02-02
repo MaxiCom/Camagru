@@ -1,27 +1,7 @@
 (function(){
-  refresh_timeline(0);
+  //refresh_timeline(0);
 
-  setTimeout(function(){ 
-  if (document.getElementById("banner"))
-    document.getElementById("banner").parentNode.removeChild(document.getElementById("banner"));
-  }, 5000);
 })();
-
-function banner_create(text, color)
-{
-  var container = document.getElementById("container");
-  var divbanner = document.createElement("div");
-
-  if (color == "green")
-    divbanner.className = "greenbanner";
-  else
-    divbanner.className = "redbanner";
-  divbanner.id = "banner";
-  divbanner.innerHTML = text;
-
-  container.parentNode.insertBefore(divbanner, container);
-  setTimeout(function(){ document.getElementById("banner").parentNode.removeChild(document.getElementById("banner")); }, 3000);
-}
 
 function ajax(request, link, Success_string)
 {

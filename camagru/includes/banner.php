@@ -2,7 +2,7 @@
 
 	if (isset($_GET['error']) && !empty($_GET['error']) || (isset($emptypassword)))
 	{
-		echo '<div id="banner" class="redbanner">';
+		echo '<div id="banner" class="banner redbanner">';
 
 			if (isset($emptypassword))
 				echo "Form fields have to be filled properly.";
@@ -19,7 +19,7 @@
 	}
 	elseif (isset($_GET['success']) && !empty($_GET['success']))
 	{
-		echo '<div id="banner" class="greenbanner">';
+		echo '<div id="banner" class="banner greenbanner">';
 
 			if ($_GET['success'] == "passwordchange")
 				echo "Your password has been changed.";

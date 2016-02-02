@@ -39,6 +39,7 @@
 		</div>
 
 		<?php include("includes/footer.html"); ?>
+		<script type="text/javascript" src="/javascript/global.js"></script>
 		<script type="text/javascript" src="/javascript/login.js"></script>
 	</body>
 </html>
