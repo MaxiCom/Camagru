@@ -4,7 +4,7 @@
 
 function Disconnect(elem)
 {
-  ajax(null, "/includes/script/disconnect.php", null, 1);
+	ajax(null, "/includes/script/disconnect.php", null, 0);
 }
 
 function delete_post(post)
