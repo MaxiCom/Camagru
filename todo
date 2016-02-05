@@ -1,13 +1,9 @@
-Responsive home.php
+TODO LIST
 
-Block footer on bottom on login.php
-
-Beautifuler les mails
-
-passer le css en Sass + compass
-
-Ajouter les notifications home.php
-
-Classes php
-
-Drag image
+  -Make Responsive /includes/home.php
+  -glue footer on bottom of /includes/login.php
+  -Make prettier css in mails
+  -Use Sass + compass
+  -Add notifications on /includes/home.php
+  -Create Php Classes
+  -Add Drag and Drop feature
