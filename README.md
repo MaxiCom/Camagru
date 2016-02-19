@@ -2,7 +2,7 @@
 
 Camagru est un projet web du cursus de l'école 42.
 
-Il consiste à faire un site web de montage photo simple avec l'api javascript native Webrtc.
+Il consiste à programmer FROM SCRATCH un site web de montage photo simple avec l'api javascript native Webrtc.
 
 serveur web conseillé:  apache2.x (pour l'htaccess).
 
