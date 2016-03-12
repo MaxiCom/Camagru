@@ -1,6 +1,6 @@
 setTimeout(function(){ 
 	document.body.className = "loaded";
-}, 1500);
+}, 2000);
 
 function form_login(form)
 {
