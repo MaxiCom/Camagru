@@ -40,7 +40,7 @@ table
 	margin-bottom: 20px;
 
 	border-spacing: 0px;
-	border-bottom: 1px solid #BFBFBE;
+	border-bottom: 1px solid #09908B;
 	
 	text-align: center;
 }
@@ -59,7 +59,7 @@ table td
 
 table td:not(:last-child)
 {
-	border-right: 1px solid #BFBFBE;
+	border-right: 1px solid  #09908B;
 }
 
 table #table_login
@@ -92,21 +92,23 @@ form input[type=submit]
 {
 	margin-top: 30px;
 
-	width: 300px;
-	height: 50px;
+	width: 180px;
+	height: 40px;
 
-	border-radius: 10px;
-	border: 1px solid #00A7A1;
+	border-radius: 5px;
+	border: 0;
 
 	background-color: #19D2CB;
 	font-size: 1.1em;
 
 	transition: all 0.5s;
+
+	box-shadow: 0px 0px 2px 0.1px #00847F;
 }
 
 form input[type=submit]:hover
 {
-	background-color: #0FBBB5;
+	background-color: #26E0D9;
 
 	outline: none;
 }
@@ -144,6 +146,8 @@ footer
 	text-align: center;
 
 	background-color: #0FBBB5;
+
+	box-shadow: 0px 0px 5px 0.5px grey;
 }
 
 /* mobile portrait*/
