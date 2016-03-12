@@ -4,8 +4,10 @@
 		<?php include_once("includes/head.html"); ?>
 		<title>Log into Camagru</title>
 		<link rel="stylesheet" type="text/css" href="/css/login.css">
+		<link rel="stylesheet" type="text/css" href="/css/loader.css">
 	</head>
 	<body>
+		<?php include("includes/loader.html"); ?>
 		<?php include("includes/header.php"); ?>
 		<?php include("includes/banner.php"); ?>
 		<div id="container">

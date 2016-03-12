@@ -1,3 +1,7 @@
+setTimeout(function(){ 
+	document.body.className = "loaded";
+}, 1500);
+
 function form_login(form)
 {
 	var request = "username=" + form.username.value 
