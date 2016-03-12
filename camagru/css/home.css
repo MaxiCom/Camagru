@@ -13,7 +13,7 @@ body
 	text-align: center;
 }
 
-/* Liste */
+/* List */
 ul
 {	
  	display: inline-block;
@@ -83,6 +83,7 @@ ul li:nth-last-child(1):hover
 	background-color: #BFBFBF;
 }
 
+/* gifs liste */
 ul #li_gif
 {
 	width: 100%;
@@ -108,56 +109,34 @@ ul #li_gif tr td
 	border-bottom: 1px solid black;
 
 	cursor: pointer;
+
+	transition: background-color 1s;
 }
 
 ul #li_gif tr td:nth-child(1)
 {
-	background: url("../images/biere.png") no-repeat;
+	background: url("../images/Cat_face.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
-
-	transition: background-color 1s;
-}
-
-ul #li_gif tr td:nth-child(1):hover
-{
-	background: url("../images/biere.gif") no-repeat;
-	background-size: 45px 45px;
-	background-position: center;
-	background-color:  #19D2CB;
 }
 
 ul #li_gif tr td:nth-child(2)
 {
-	background: url("../images/singe.png") no-repeat;
+	background: url("../images/Happy_face.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
 
-	transition: background-color 1s;
-}
-
-ul #li_gif tr td:nth-child(2):hover
-{
-	background: url("../images/singe.gif") no-repeat;
-	background-size: 45px 45px;
-	background-position: center;
-	background-color:  #19D2CB;
 }
 
 ul #li_gif tr td:nth-child(3)
 {
-	background: url("../images/banane.png") no-repeat;
+	background: url("../images/poker_face.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
-
-	transition: background-color 1s;
 }
 
-ul #li_gif tr td:nth-child(3):hover
+ul #li_gif tr td:hover
 {
-	background: url("../images/banane.gif") no-repeat;
-	background-size: 45px 45px;
-	background-position: center;
 	background-color:  #19D2CB;
 }
 
@@ -166,6 +145,7 @@ ul #li_gif tr td:not(:last-child)
 	border-right: 1px solid black;
 }
 
+/* canvas */
 #canvas_li
 {
 	padding: 0;
@@ -176,7 +156,6 @@ ul #li_gif tr td:not(:last-child)
 	padding: 0;
 }
 
-/* canvas */
 canvas
 {
 	width: 500px;

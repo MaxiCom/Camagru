@@ -16,9 +16,9 @@
 				<li id="li_gif" class="display_none">
 					<table>
 						<tr>
-							<td id="beer" onclick="display_png(this)"></td>
-							<td id="monkey" onclick="display_png(this)"></td>
-							<td id="banana" onclick="display_png(this)"></td>
+							<td id="catFace" onclick="display_png(this)"></td>
+							<td id="happyFace" onclick="display_png(this)"></td>
+							<td id="pokerFace" onclick="display_png(this)"></td>
 							<td onclick="clear_context()">Clear</td>
 						</tr>
 					</table>

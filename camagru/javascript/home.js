@@ -77,38 +77,35 @@ function handle_input_file()
 
 function display_png(elem)
 {
-  var beer = document.getElementById("beer");
-  var monkey = document.getElementById("monkey");
-  var banana = document.getElementById("banana");
+  var beer = document.getElementById("catFace");
+  var monkey = document.getElementById("happyFace");
+  var banana = document.getElementById("pokerFace");
   var canvas_png = document.getElementById("canvas");
   var canvasctx = canvas.getContext('2d');
   var draw = new Image();
-  var x, y, width;
+  var x, y;
 
-  if (elem.id == "beer")
+  if (elem.id == "catFace")
   {
-    draw.src = "images/biere.png";
+    draw.src = "images/Cat_face.png";
     x = 225;
     y = 50;
-    width = 50;
   }
-  else if (elem.id == "monkey")
+  else if (elem.id == "happyFace")
   {
-    draw.src = "images/singe.png";
+    draw.src = "images/Happy_face.png";
     x = 25;
     y = 50;
-    width = 75;
   }
-  if (elem.id == "banana")
+  if (elem.id == "pokerFace")
   {
-    draw.src = "images/banane.png";
+    draw.src = "images/Poker_face.png";
     x = 125;
     y = 101;
-    width = 70;
   }
 
     draw.onload = function (){
-      canvasctx.drawImage(draw, x, y, width, 50);
+      canvasctx.drawImage(draw, x, y, 50, 38);
     };
 }
 
