@@ -83,29 +83,16 @@ function display_png(elem)
   var canvas_png = document.getElementById("canvas");
   var canvasctx = canvas.getContext('2d');
   var draw = new Image();
-  var x, y;
 
   if (elem.id == "catFace")
-  {
     draw.src = "images/Cat_face.png";
-    x = 225;
-    y = 50;
-  }
   else if (elem.id == "happyFace")
-  {
     draw.src = "images/Happy_face.png";
-    x = 25;
-    y = 50;
-  }
   if (elem.id == "pokerFace")
-  {
     draw.src = "images/Poker_face.png";
-    x = 125;
-    y = 101;
-  }
 
     draw.onload = function (){
-      canvasctx.drawImage(draw, x, y, 50, 38);
+      canvasctx.drawImage(draw, 80, 10, 150, 115);
     };
 }
 
