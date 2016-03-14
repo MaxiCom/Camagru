@@ -50,8 +50,8 @@
 
 			<form id="div_comment" onsubmit="return post_comment(this)">
 				<input type="hidden" id="id_picture" value="<?php echo $row['rowid']; ?>">
-				<input type="text" id="input_comment" size="50" required  pattern=".{1,140}" placeholder="Comment ...">
-				<input type="submit">
+				<input type="text" id="input_comment" size="40" required  pattern=".{1,140}" placeholder="Comment ...">
+				<input type="submit" value="Send">
 			</form>
 		</div>
 

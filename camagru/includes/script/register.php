@@ -24,7 +24,7 @@
 	}
 
 	//Set var
-	$username = htmlspecialchars($_POST['username']);
+	$username = trim(strtoupper(htmlspecialchars($_POST['username'])));
 
 	//Check already used username
 	$stmt = $db->prepare("SELECT COUNT(*) FROM users WHERE username = :username");

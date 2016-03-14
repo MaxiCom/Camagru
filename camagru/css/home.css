@@ -131,11 +131,19 @@ ul #li_gif tr td:not(:last-child) {
 	border-right: 1px solid black;
 }
 
-video {
+
+/* canvas  A CHANGER */
+video, canvas {
 	margin-top: 2px;
 }
 
-/* canvas */
+#canvasfile {
+	width: 500px;
+	height: 375px;
+
+	padding: 0;
+}
+
 #canvas_li, #canvasfile_li {
 	padding: 0;
 }
@@ -145,11 +153,6 @@ canvas {
 	height: 375px;
 
 	position: absolute;
-}
-
-#canvasfile {
-	width: 500px;
-	height: 375px;
 }
 
 #livid, #lifile {
@@ -238,6 +241,18 @@ canvas {
 		width: 350px;
 
 		transition: 1s all;
+	}
+
+	#livid, #canvasfile, video, canvas, #lifile {
+		height: 260px;
+	}
+
+	video, canvas, #canvasfile {
+		width: 350px;
+	}
+
+	#livid {
+		margin-bottom: 2px;
 	}
 
 	#header_container #left {

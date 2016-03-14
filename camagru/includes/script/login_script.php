@@ -21,7 +21,7 @@
 		die();
 	}
 
-	$username = htmlspecialchars($_POST['username']);
+	$username = trim(strtoupper(htmlspecialchars($_POST['username'])));
 	$password = hash("SHA256", $_POST['password']);
 
 	$stmt = $db->prepare("SELECT COUNT(*) FROM users where username = :username and password = :password and active=1");
