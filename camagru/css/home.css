@@ -28,7 +28,7 @@ ul {
 }
 
 ul li {
-	padding: 10px;
+	padding: 5px;
 
 	text-align: center;
 }
@@ -143,13 +143,7 @@ video {
 }
 
 /* canvas */
-#canvas_li
-{
-	padding: 0;
-}
-
-#canvasfile_li
-{
+#canvas_li, #canvasfile_li {
 	padding: 0;
 }
 
@@ -167,20 +161,13 @@ canvas
 	height: 375px;
 }
 
-#livid
-{
-	height: 375px;
-	
-	padding: 0;
-}
-
-#lifile
-{
+#livid, #lifile {
 	height: 375px;
 
 	padding: 0;
 }
 
+/* POST */
 .post
 {
 	margin-top: 20px; 
@@ -202,7 +189,7 @@ canvas
 
 .post img
 {
-	width: 499px;
+	width: 498px;
 }
 
 #div_comment
@@ -210,9 +197,13 @@ canvas
 	padding: 10px;
 }
 
+#div_comment input[type=submit]{
+	cursor: pointer;
+}
+
 .comment 
 {
-	margin: 5px;
+	padding: 5px;
 
 	text-align: left;
 	border-bottom: 1px solid black;
@@ -223,7 +214,7 @@ canvas
 	-ms-word-break: break-all;
     word-break: break-all;
 
-	padding: 0;
+	padding: 4px;
 }
 
 .comment .content
@@ -235,4 +226,11 @@ canvas
 {
 	text-align: left;
 	border-bottom: 1px solid black;
+
+	line-height: 18px;
+}
+
+#likes button
+{
+	cursor: pointer;
 }

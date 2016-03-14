@@ -41,7 +41,10 @@ function ajax(request, link, form, home)
 					form.reset();
 				}
 				else if (home == 1)
-					banner_create("Done !", "green");
+				{
+					if (link != "/includes/script/upload_comment.php" && link != "/includes/script/like_post.php")
+						banner_create("Done !", "green");
+				}
 				else
 					document.location.href = "/";
 			}
