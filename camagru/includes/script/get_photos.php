@@ -11,7 +11,7 @@
 		<div class='post'>
 			<div class='float-left'>
 				<p>
-					<b><?php echo $row['username'];?></b> a posté
+					<b><?php echo $row['username'];?></b> Posted
 				</p>
 			</div>
 
@@ -27,7 +27,7 @@
 
 			<img height=360 src="<?php echo $row['image']; ?>"/>
 
-			<p id="likes"><?php echo $row['likes'];?> Likes
+			<p id="likes"><?php echo $row['likes'];?> Like
 
 				<!-- si n'a pas like afficher le bouton -->
 				<?php if (!isset($_SESSION["liked_on_picture_id_".$row['rowid']])) { ?>
