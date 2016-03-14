@@ -107,16 +107,11 @@ header #right table td:nth-child(1)
 
 header #logout_button
 {
-	padding: 5px 5px 5px 5px;
+	padding: 3px;
 
 	margin-left: 5px;
 
 	border-radius: 5px;
-}
-
-header #logout_button:hover
-{
-	background-color: #19D2CB;
 }
 
 /* banniere */
