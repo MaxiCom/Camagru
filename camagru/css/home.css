@@ -60,10 +60,6 @@ ul li {
 	transition: all 0.5s;
 }
 
-#inputWrapper .middle:hover {
-	background-color: #19D2CB;
-}
-
 #inputWrapper li:nth-child(1) {
 	border-right: 1px solid black;	
 }
@@ -140,6 +136,10 @@ ul #li_gif tr td:hover
 ul #li_gif tr td:not(:last-child)
 {
 	border-right: 1px solid black;
+}
+
+video {
+	margin-top: 2px;
 }
 
 /* canvas */

@@ -49,7 +49,6 @@ a
 	cursor: pointer;
 }
 
-
 /* header base */
 header
 {
@@ -70,16 +69,14 @@ header
 	z-index: 2;
 }
 
-#header_container
-{
+#header_container {
 	width: 75%;
 
 	margin: 0 auto;
 } 
 
 /* header left */
-header h1
-{
+header h1 {
 	padding: 0px 5px 4px 5px;
 
 	transition: 0.4s all;
