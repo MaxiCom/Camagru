@@ -9,6 +9,8 @@ body {
 	margin: auto;
 
 	text-align: center;
+
+	transition: 1s all;
 }
 
 /* List */
@@ -177,6 +179,8 @@ canvas {
 .post img
 {
 	width: 498px;
+
+	transition: 1s all;
 }
 
 #div_comment
@@ -220,4 +224,15 @@ canvas {
 #likes button
 {
 	cursor: pointer;
+}
+
+/* mobile portrait*/
+@media(max-width: 650px)
+{
+	#container, .post img{
+
+		width: 350px;
+
+		transition: 1s all;
+	}
 }
