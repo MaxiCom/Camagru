@@ -11,7 +11,7 @@
 		<div class='post'>
 			<div class='float-left'>
 				<p>
-					<b><?php echo $row['username'];?></b> Posted
+					<b><?php echo $row['username'];?></b>
 				</p>
 			</div>
 
