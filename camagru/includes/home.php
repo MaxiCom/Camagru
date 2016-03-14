@@ -11,8 +11,12 @@
 		<div id="container">
 			<ul>
 				<li><h3>To upload a picture you can</h3></li>
-				<li class="middle pointer" onclick="active_webcam();">Use your webcam</li>
-				<li class="middle pointer" onclick="handle_input_file()">Choose an image file</li>
+
+				<div id="inputWrapper">
+					<li class="middle pointer" onclick="active_webcam();">Use your webcam</li>
+					<li class="middle pointer" onclick="handle_input_file()">Choose an image file</li>
+				</div>
+				
 				<li id="li_gif" class="display_none">
 					<table>
 						<tr>
@@ -29,6 +33,7 @@
 				<li id="lifile" class="display_none"></li>
 				<li onclick="send_file()" class="pointer">Send</li>
 			</ul>
+
 			<div id="timeline">
 
 			</div>

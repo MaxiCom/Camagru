@@ -86,10 +86,7 @@ header h1
 }
 
 /* header right  */
-header #right
-{
-	float: right;
-
+header #right {
 	height: 20px;
 }
 

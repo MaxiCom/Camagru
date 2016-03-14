@@ -1,3 +1,7 @@
+<?php
+	if (!isset($_COOKIE['loader']))
+		setcookie("loader", "1", time() + 180);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="/css/loader.css">
 	</head>
 	<body>
-		<?php include("includes/loader.html"); ?>
+		<?php if (!isset($_COOKIE['loader'])) 
+				include("includes/loader.html");?>
 		<?php include("includes/header.php"); ?>
 		<?php include("includes/banner.php"); ?>
 		<div id="container">

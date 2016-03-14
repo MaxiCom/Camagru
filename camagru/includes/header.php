@@ -5,7 +5,7 @@
 			<h1 class="pointer" <?php if (isset($_SESSION['logged'])) echo "onclick='refresh_timeline();'";?> >Camagru</h1>
 		</div>
 
-		<div id="right">
+		<div id="right" class="float-right">
 			<!-- if logged -->		
 			<?php if (isset($_SESSION['logged'])) { ?>
 				<table>
