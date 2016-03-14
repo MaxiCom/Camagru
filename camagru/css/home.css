@@ -77,8 +77,7 @@ ul li {
 }
 
 /* gifs liste */
-ul #li_gif
-{
+ul #li_gif {
 	width: 100%;
 
 	height: 50px;
@@ -87,8 +86,7 @@ ul #li_gif
 	padding: 0;
 }
 
-ul #li_gif table
-{
+ul #li_gif table {
 	width: 100%;
 
 	border-top: 1px solid black;
@@ -96,8 +94,7 @@ ul #li_gif table
 	border-spacing: 0px;
 }
 
-ul #li_gif tr td
-{
+ul #li_gif tr td {
 	width: 30%;
 	height: 55px;
 
@@ -106,35 +103,29 @@ ul #li_gif tr td
 	transition: background-color 1s;
 }
 
-ul #li_gif tr td:nth-child(1)
-{
+ul #li_gif tr td:nth-child(1) {
 	background: url("../images/Cat_face.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
 }
 
-ul #li_gif tr td:nth-child(2)
-{
+ul #li_gif tr td:nth-child(2) {
 	background: url("../images/Happy_face.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
-
 }
 
-ul #li_gif tr td:nth-child(3)
-{
+ul #li_gif tr td:nth-child(3) {
 	background: url("../images/poker_face.png") no-repeat;
 	background-size: 45px 45px;
 	background-position: center;
 }
 
-ul #li_gif tr td:hover
-{
+ul #li_gif tr td:hover {
 	background-color:  #19D2CB;
 }
 
-ul #li_gif tr td:not(:last-child)
-{
+ul #li_gif tr td:not(:last-child) {
 	border-right: 1px solid black;
 }
 
@@ -147,16 +138,14 @@ video {
 	padding: 0;
 }
 
-canvas
-{
+canvas {
 	width: 500px;
 	height: 375px;
 
 	position: absolute;
 }
 
-#canvasfile
-{
+#canvasfile {
 	width: 500px;
 	height: 375px;
 }
@@ -167,9 +156,7 @@ canvas
 	padding: 0;
 }
 
-/* POST */
-.post
-{
+.post {
 	margin-top: 20px; 
 
 	border: 1px solid grey;
@@ -180,8 +167,8 @@ canvas
 	background-color: #19D2CB;
 }
 
-.post p
-{
+/* POST CEST DE LA MERDE */
+.post p {
 	padding: 10px;
 
 	line-height: 10px; 
