@@ -229,10 +229,23 @@ canvas {
 /* mobile portrait*/
 @media(max-width: 650px)
 {
+	body {
+		min-width: 400px;
+	}
+
 	#container, .post img{
 
 		width: 350px;
 
 		transition: 1s all;
+	}
+
+	#header_container #left {
+		float: none;
+		text-align: center;
+	}
+
+	header #right {
+		display: none;
 	}
 }
