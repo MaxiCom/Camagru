@@ -1,5 +1,8 @@
 body {
 	min-width: 600px;
+
+	display: flex;
+	flex-direction: column;
 }
 
 header h1:active {
@@ -11,6 +14,10 @@ header h1:active {
 }
 
 #container {
+	flex: 1;
+}
+
+#container #wrapper{
 	width: 85%;
 	max-width: 600px;
 
@@ -123,9 +130,6 @@ form input[type=text], form input[type=password], form input[type=email] {
 }
 
 footer {
-	position: absolute;
-	bottom: 0px;
-
 	width: 100%;
 	min-width: 570px;
 
