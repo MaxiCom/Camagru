@@ -172,66 +172,57 @@ canvas {
 	background-color: #19D2CB;
 }
 
-/* POST CEST DE LA MERDE */
 .post p {
 	padding: 10px;
 
 	line-height: 10px; 
 }
 
-.post img
-{
+.post img {
 	width: 498px;
 
 	transition: 1s all;
 }
 
-#div_comment
-{
+#div_comment {
 	padding: 10px;
 }
 
-#div_comment input[type=submit]{
+#div_comment input[type=submit] {
 	cursor: pointer;
 }
 
-.comment 
-{
+.comment {
 	padding: 5px;
 
 	text-align: left;
 	border-bottom: 1px solid black;
 }
 
-.comment p
-{
+.comment p {
 	-ms-word-break: break-all;
     word-break: break-all;
 
 	padding: 4px;
 }
 
-.comment .content
-{
+.comment .content {
 	padding-left: 15px;
 }
 
-#likes
-{
+#likes {
 	text-align: left;
 	border-bottom: 1px solid black;
 
 	line-height: 18px;
 }
 
-#likes button
-{
+#likes button {
 	cursor: pointer;
 }
 
 /* mobile portrait*/
-@media(max-width: 650px)
-{
+@media(max-width: 650px) {
 	body {
 		min-width: 400px;
 	}

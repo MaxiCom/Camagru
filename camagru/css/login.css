@@ -1,10 +1,8 @@
-body
-{
+body {
 	min-width: 600px;
 }
 
-header h1:active
-{
+header h1:active {
 	padding-left: 50px;
 
 	-webkit-transform:rotate(360deg);
@@ -12,8 +10,7 @@ header h1:active
 	-o-transform:rotate(360deg);
 }
 
-#container
-{
+#container {
 	width: 85%;
 	max-width: 600px;
 
@@ -31,8 +28,7 @@ header h1:active
 	box-shadow: 0px 0px 5px 0.5px grey;
 }
 
-table
-{
+table {
 	width: 100%;
 
 	height: 50px;
@@ -46,8 +42,7 @@ table
 	text-align: center;
 }
 
-table td
-{
+table td {
 	width: 33%;
 
 	cursor: pointer;
@@ -55,35 +50,29 @@ table td
 	text-transform: uppercase;
 }
 
-table td
-{
+table td {
 	transition: all 1s;
 }
 
-table td:not(:last-child)
-{
+table td:not(:last-child) {
 	border-right: 1px solid  #09908B;
 }
 
-table #table_login
-{
+table #table_login {
 	border-top-left-radius: 10px;
 
 	background-color: #19D2CB;
 }
 
-table #table_forgot
-{	
+table #table_forgot {	
 	border-top-right-radius: 10px;
 }
 
-#password_form
-{
+#password_form {
 	padding-top: 20px;
 }
 
-form
-{
+form {
 	width: 300px;
 
 	margin: auto;
@@ -91,8 +80,7 @@ form
 	text-align: center;
 }
 
-form input[type=submit]
-{
+form input[type=submit] {
 	margin-top: 30px;
 
 	width: 180px;
@@ -111,22 +99,19 @@ form input[type=submit]
 	cursor: pointer;
 }
 
-form input[type=submit]:hover
-{
+form input[type=submit]:hover {
 	background-color: #26E0D9;
 
 	outline: none;
 }
 
-form label
-{
+form label {
 	float: left;
 
 	cursor: pointer;
 }
 
-form input[type=text], form input[type=password], form input[type=email]
-{
+form input[type=text], form input[type=password], form input[type=email] {
 	float:right;
 
 	padding: 3px;
@@ -137,8 +122,7 @@ form input[type=text], form input[type=password], form input[type=email]
 	box-shadow: 0px 0px 3px 0.1px #09908B;
 }
 
-footer
-{
+footer {
 	position: absolute;
 	bottom: 0px;
 
@@ -158,30 +142,24 @@ footer
 }
 
 /* mobile portrait*/
-@media(max-width: 600px)
-{
-	body
-	{
+@media(max-width: 600px) {
+	body {
 		min-width: 370px;
 	}
 
-	#header_container
-	{
+	#header_container {
 		text-align: center;
 	}
 
-	header #left
-	{
+	header #left {
 		float: none;
 	}
 
-	header h1:active
-	{
+	header h1:active {
 		padding: 0;
 	}
 
-	footer
-	{
+	footer {
 		min-width: 370px;
 	}
 }

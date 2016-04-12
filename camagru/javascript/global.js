@@ -35,13 +35,11 @@ function ajax(request, link, form, home)
 			if (xmlhttp.responseText == "Success")
 			{
 				//si il y a un formulaire a changer
-				if (form != null)
-				{
+				if (form != null) {
 					banner_create("Check your inbox", "green");
 					form.reset();
 				}
-				else if (home == 1)
-				{
+				else if (home == 1) {
 					if (link != "/includes/script/upload_comment.php" && link != "/includes/script/like_post.php")
 						banner_create("Done !", "green");
 				}
