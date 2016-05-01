@@ -2,7 +2,6 @@
 
 	session_start();
 
-	session_destroy();
+	unset($_SESSION['logged']);
 	echo "Success";
-
 ?>
