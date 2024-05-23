@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+const DATABASE_FILE_PATH = __DIR__ . '/../database/camagru.db';
+const DATABASE_DSN = 'sqlite:' . DATABASE_FILE_PATH;
+
+const SCHEMA_FILE_PATH = __DIR__ . '/../sql/schema.sql';
+
+if (file_exists(DATABASE_FILE_PATH)) {
+    return;
+}
+
+try {
+    $database = new PDO(DATABASE_DSN);
+
+    $schema = file_get_contents(SCHEMA_FILE_PATH);
+    if ($schema === false) {
+        throw new Exception('Unable to read the schema file');
+    }
+
+    $database->exec($schema);
+} catch (PDOException $error) {
+    echo 'Database error: ' . $error->getMessage();
+} catch (Exception $error) {
+    echo 'General error: ' . $error->getMessage();
+}

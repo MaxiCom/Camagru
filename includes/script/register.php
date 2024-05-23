@@ -52,6 +52,8 @@
 	$active_value = hash('md5', time());
 	$link = "http://localhost:8080/activate.php?v=".$active_value;
 
+    var_dump($active_value);
+
 	$stmt = $db->prepare('INSERT INTO users (username, password, email, active) VALUES (:username, :password, :email, :active_value)');
 	$array = array(
 	         ':username'   => $username,
